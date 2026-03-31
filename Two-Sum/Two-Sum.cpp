@@ -9,7 +9,7 @@ public:
         std::unordered_map<int, int> map_nums_vals;
 
         for (int i = 0; i < nums.size(); ++i) {
-            int look_for = target - nums[i]; // 4
+            int look_for = target - nums[i];
             if (map_nums_vals.find(look_for) != map_nums_vals.end()) {
                 return std::vector<int>{map_nums_vals[look_for], i};
             }
