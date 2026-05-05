@@ -22,7 +22,7 @@ public:
                     std::vector<int> temp_vector{nums[i], nums[left_i], nums[right_i]};
                     result.emplace_back(temp_vector);
                     ++left_i;
-                    while (nums[left_i] == nums[left_i - 1]) {
+                    while (left_i < nums.size() && nums[left_i] == nums[left_i - 1]) {
                         ++left_i;
                     }
                 }
